@@ -1,0 +1,25 @@
+{
+  "name": "vscode-anml",
+  "displayName": "vscode-anml",
+  "description": "ANML Planning Language Support",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "anml",
+      "aliases": ["ANML", "anml"],
+      "extensions": [".anml"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "anml",
+      "scopeName": "source.anml",
+      "path": "./syntaxes/anml.tmLanguage.json"
+    }]
+  }
+}

@@ -1,0 +1,63 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "ANML",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#storage"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#constants"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.anml",
+					"match": "\\b(forall|:decomposition|in|with|contains)\\b"
+				}
+			]
+		},
+		"storage": {
+			"patterns": [
+				{
+					"name": "storage.type.anml",
+					"match": "\\b(type|constant|fluent|instance|action|variable|function)\\b"
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.double-slash",
+					"begin": "(^[ \\t]+)?((//)(?:\\s*((@)internal)(?=\\s|$))?)",
+					"end": "(?=$)"
+				},
+				{
+					"name": "comment.block.anml",
+					"begin": "(/\\*)(?:\\s*((@)internal)(?=\\s|(\\*/)))?",
+					"end": "\\*/"
+				}
+			]
+		},
+		"constants": {
+			"patterns": [
+				{
+					"name": "constant.numeric",
+					"match": "\\b[-+]?([0-9]*\\.[0-9]+|[0-9]+)\\b"
+				},
+				{
+					"name": "constant.language",
+					"match": "\\b(true|false|end|start|all)\\b"
+				}
+			]
+		}
+	},
+	"scopeName": "source.anml"
+}
