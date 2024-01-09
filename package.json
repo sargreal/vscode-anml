@@ -2,7 +2,12 @@
   "name": "vscode-anml",
   "displayName": "vscode-anml",
   "description": "ANML Planning Language Support",
-  "version": "0.0.1",
+  "license": "MIT",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sargreal/vscode-anml"
+  },
   "engines": {
     "vscode": "^1.85.0"
   },
